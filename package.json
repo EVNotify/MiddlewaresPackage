@@ -1,0 +1,27 @@
+{
+  "name": "@evnotify/middlewares",
+  "version": "1.0.0",
+  "description": "Package providing middlewares for EVNotify services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EVNotify/MiddlewaresPackage.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "author": "GPlay97",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/EVNotify/MiddlewaresPackage/issues"
+  },
+  "homepage": "https://github.com/EVNotify/MiddlewaresPackage#readme",
+  "dependencies": {
+    "@evnotify/utils": "^1.0.0",
+    "axios": "^0.19.0",
+    "express": "^4.17.1"
+  }
+}
