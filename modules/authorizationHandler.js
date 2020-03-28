@@ -17,7 +17,8 @@ module.exports = asyncHandler(async (req, res, next) => {
     axios.post(process.env.AUTHORIZATION_SERVICE, {
         referer: {
             method: req.method,
-            path: req.originalUrl
+            path: req.originalUrl,
+            params: req.params
         }
     }, {
         headers: {
