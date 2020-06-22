@@ -14,7 +14,7 @@ module.exports = asyncHandler(async (req, res, next) => {
         "message": "Invalid authorization"
     };
 
-    axios.post(process.env.AUTHORIZATION_SERVICE, {
+    axios.post(`${process.env.AUTHORIZATION_SERVICE}/${req.headers.authorization}`, {
         referer: {
             method: req.method,
             path: req.originalUrl,
