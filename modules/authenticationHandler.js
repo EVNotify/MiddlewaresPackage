@@ -9,6 +9,12 @@ module.exports = asyncHandler(async (req, res, next) => {
             "message": "Missing authorization header. Ensure that API Key is provided as Bearer token within Authorization header"
         });
     }
+    if (!req.headers.akey || !req.headers.akey.toString || req.headers.akey.toString().length !== 6) {
+        return next({
+            "code": 400,
+            "message": "Missing or invalid akey header. Ensure that AKey is provided as within AKey header"
+        });
+    }
     const unauthenticated = {
         "code": 401,
         "message": "Invalid authentication"
