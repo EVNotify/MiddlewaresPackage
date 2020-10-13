@@ -20,7 +20,7 @@ module.exports = asyncHandler(async (req, res, next) => {
         "message": "Invalid authentication"
     };
 
-    axios.post(process.env.AUTHENTICATION_SERVICE + '/verify/' + req.headers.akey, {}, {
+    axios.post(process.env.AUTHENTICATION_SERVICE + '/' + req.headers.akey + '/verify', {}, {
         headers: {
             'Authorization': req.headers.authorization,
             'Authentication': req.headers.token
